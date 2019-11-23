@@ -1,0 +1,55 @@
+<!Send light info from arduino
+receieve info?? on OSU server
+store in SQL server
+use php?  host on appache?
+send data via wifi? cell transmission? 
+
+/*Site Design
+* show previous 15 min of data, one data point every min
+*	(title)  "LIGHT SENSOR"
+*	axis labels - qualatative & resistance (darkness, low, ambient, direct light)
+*/!>
+
+<!DOCTYPE html>
+<html>
+<!items inside of style tags are CSS.  used to set formatting for the document>
+	<style>
+h1 {
+	text-align: center;
+	color: red;
+}
+p {
+	text-align: center;
+	color: white;
+}
+#mycanvas{
+	background: white;
+	padding: 0;
+	margin: auto;
+	display: block;
+		opacity: 0.4;
+}
+body {
+	background-image: url("Man in the Moon 323.png");
+	background-repeat: no-repeat;
+	background-color: black;
+	background-position: center top;
+}
+	</style>
+	<head>
+		<title>Page Title</title>
+	</head>
+	<body>
+
+		<h1>LIGHT SENSOR</h1>
+		<canvas id = "mycanvas" width = "700" height = "400"></canvas>
+		<script>
+		var graph_background = document.GetElementById('mycanvas');
+		var bck_context = graph_background.getContext("2d");
+bck_context.moveto(200,200);
+		</script>
+		<p>Light</p>
+		<p>Time (min)</p>
+
+	</body>
+</html>
